@@ -8,6 +8,7 @@ Steps for installing
 To create our own analog designs we are going to need to download and set up the following:
 
 
+![Image Description](../Figures_Analog_Tutorial/diagram.png)
 
 
 ### Installing Xschem

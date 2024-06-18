@@ -6,8 +6,13 @@ Let's start by creating the 5-transistor operational amplifier. For this design,
 
 Quick reminder of the equations governing the behavior of a transistor:
 
-- **Drain current (I_D) for NMOS**: `I_D = μn Cox (W/L) (V_GS - V_th)^2 (1 + λ V_DS)` when `V_GS > V_th` and `V_DS > V_GS - V_th`.
-- **Drain current (I_D) for PMOS**: `I_D = μp Cox (W/L) (V_SG - V_th)^2 (1 + λ V_SD)` when `V_SG > V_th` and `V_SD > V_SG - V_th`.
+- **Drain current (I_D) for NMOS**: 
+    - When `V_GS > V_th` and `V_DS > V_GS - V_th`, the drain current is given by:
+    - `$I_D = \mu_n Cox \frac{W}{L} (V_{GS} - V_{th})^2 (1 + \lambda V_{DS})$`
+
+- **Drain current (I_D) for PMOS**: 
+    - When `V_SG > V_th` and `V_SD > V_SG - V_th`, the drain current is given by:
+    - `$I_D = \mu_p Cox \frac{W}{L} (V_{SG} - V_{th})^2 (1 + \lambda V_{SD})$`
 
 Where:
 - `μn` and `μp` are the mobility for electrons and holes, respectively.
