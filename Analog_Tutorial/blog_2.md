@@ -22,11 +22,4 @@ Where:
 - `V_th` is the threshold voltage.
 - `λ` is the channel-length modulation parameter.
 
-## Simulation
 
-To validate the behavior of this amplifier, proceed to the Analog Primitives Validation area of the GoogleSkywater design platform. There, you can use SPICE simulations to analyze the performance of your circuit under different conditions. It's essential to check for parameters like gain, bandwidth, and power consumption to ensure the amplifier meets the required specifications.
-
-1. **Setup the Environment**: Ensure that all the necessary libraries and tools are installed. GoogleSkywater typically requires specific versions of SPICE simulators.
-2. **Circuit Layout**: Draft your layout using the provided schematic editor. Place all components according to the design rules for GoogleSkywater technology.
-3. **Run Simulations**: Execute the simulation scripts, focusing on DC, AC, and transient analyses. Look for any discrepancies in the expected output and refine the design as needed.
-4. **Validation**: Once the simulations yield satisfactory results, validate the design through the GoogleSkywater toolkit to ensure it meets all technological and operational standards.
