@@ -1,25 +1,20 @@
-# Part 2: Create a Simple Amplifier
+# Part 2: Create a Comparator/Operational Amplifier
+For the first design, we are going to create a 5-transistor operational amplifier. This amplifier will be at the heart of our first analog neuron in part 3. I will also make a part 3.5, for those who want to fo more thoroughly through the equations to design this subsystem. 
 
-Let's start by creating the 5-transistor operational amplifier. For this design, we will utilize 5 transistors: 3 NMOS and 2 PMOS. The upper 2 PMOS transistors are part of a structure called a current mirror, while the lower three include a differential pair and the last transistor at the bottom can be considered a current source.
+This design will be based on the one done by Steffan Schnippers (The creator of xschem for this YouTube video). In an attempt to improve the overall learning process, I will be more thorough than the video. It will hopefully be more thorough for the beginners and also be a faster alternative to a video for those who just want a quick introduction to the xschem-skywater process. 
 
-## Equations
+## Essential Xshcem Shortcuts
 
-Quick reminder of the equations governing the behavior of a transistor:
+1. add new components: cltr+i 
+2. move objects: left click,m,move_coursor",lef click
+3. horizontally mirror objects: shift+f
+4. 
 
-- **Drain current (I_D) for NMOS**: 
-    - When `V_GS > V_th` and `V_DS > V_GS - V_th`, the drain current is given by:
-    - `$I_D = \mu_n Cox \frac{W}{L} (V_{GS} - V_{th})^2 (1 + \lambda V_{DS})$`
 
-- **Drain current (I_D) for PMOS**: 
-    - When `V_SG > V_th` and `V_SD > V_SG - V_th`, the drain current is given by:
-    - `$I_D = \mu_p Cox \frac{W}{L} (V_{SG} - V_{th})^2 (1 + \lambda V_{SD})$`
+## Set up circuit
 
-Where:
-- `μn` and `μp` are the mobility for electrons and holes, respectively.
-- `Cox` is the gate oxide capacitance per unit area.
-- `W` and `L` are the width and length of the transistor channel.
-- `V_GS`, `V_SG`, `V_DS`, and `V_SD` are the gate-source and drain-source voltages for NMOS and PMOS, respectively.
-- `V_th` is the threshold voltage.
-- `λ` is the channel-length modulation parameter.
+
+First we are gonna 
+
 
 
