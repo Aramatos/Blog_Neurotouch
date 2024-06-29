@@ -6,15 +6,22 @@ This design will be based on the one done by Steffan Schnippers (The creator of 
 ## Essential Xshcem Shortcuts
 
 1. add new components: cltr+i 
-2. move objects: left click,m,move_coursor",lef click
+2. move objects: left click,m,move_coursor",left click
 3. horizontally mirror objects: shift+f
 4. 
 
 
-## Set up circuit
+## Set up the ports
+We are going to be creating a comparator op-amp block and a symbol corresponding to it. Meaning that after designing ths op amp we will be able to replicate it infinitely as any other component in out library (like a resistor or a capacitor). To do this we also need to define the input, output, power and bias ports (if we grabbed a premade op-amp it would already have those).
+
+press ctrl+i to insert a new component. 
+
+![Uploading image.png…]()
 
 
-First we are gonna 
+
+
+
 
 
 
