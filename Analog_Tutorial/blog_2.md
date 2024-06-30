@@ -5,9 +5,9 @@ This design will be based on the one done by Steffan Schnippers (The creator of 
 
 ## Essential Xshcem Shortcuts
 
-1. add new components: cltr+i 
-2. move objects: left click,m,move_coursor",left click
-3. horizontally mirror objects: shift+f
+1. add new components: **cltr+i**
+2. move objects: **left click,m,move_coursor",left click**
+3. horizontally mirror objects:**shift+f**
 4. 
 
 
