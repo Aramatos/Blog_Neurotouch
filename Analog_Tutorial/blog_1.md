@@ -19,30 +19,71 @@ analog cirucit designs. In this tutorial we are going to install 2 graphical pro
 ```bash
 git clone https://github.com/StefanSchippers/xschem.git xschem-src
 ```
-
 ```bash
 ./configure
 ```
-
 ```bash
 make
 ```
-
-
 ```bash
 sudo make install
 ```
 ### Installing Magic
+```bash
+git clone https://github.com/StefanSchippers/xschem.git xschem-src
+```
+```bash
+./configure
+```
+```bash
+make
+```
+```bash
+sudo make install
+```
 
 ### Installing Ng Spice
+```bash
+git clone https://github.com/StefanSchippers/xschem.git xschem-src
+```
+```bash
+./configure
+```
+```bash
+make
+```
+```bash
+sudo make install
+```
 
 ### Installing Nnet
+```bash
+git clone https://github.com/StefanSchippers/xschem.git xschem-src
+```
+```bash
+./configure
+```
+```bash
+make
+```
+```bash
+sudo make install
+```
 
 
 ### Installing the GAW
-although not mentioned in the original tutorial, you will also probably have to install GAW to run simulations
-
-
+```bash
+git clone https://github.com/StefanSchippers/xschem.git xschem-src
+```
+```bash
+./configure
+```
+```bash
+make
+```
+```bash
+sudo make install
+```
 
 ### Installing the PDK
 ```bash
