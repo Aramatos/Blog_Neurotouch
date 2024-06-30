@@ -1,15 +1,16 @@
 
 
 ## Process for installing
+Various software packages and data packages are necessary to create our own analog circuit designs. 
+In this tutorial, we are going to explain how to install all necessary packages and provide additional 
+knowledge for those unfamiliar with Linux installations and all the software tools needed to design 
+analog circuits.
 
-
-Steps for installing
-
-Various software packages and data packages are nesecarry to create our own 
-analog cirucit designs. In this tutorial we are going to install 2 graphical programs (Xschem & Magic VLSI)
-1 simulator program (nGspice), 1 data package (Skywater PDK 130) and 1 program that veirfies part of our design (Ngnet).
-
-
+We are going to install 5 things in toal:
+2 graphical design programs (Xschem & Magic VLSI)
+1 simulator program (nGspice)
+1 data package (Skywater PDK 130) 
+1 program that cross-checks the design at the schematic and layout level (Ngnet).
 
 ![Image Description](../Figures_Analog_Tutorial/diagram.png)
 
