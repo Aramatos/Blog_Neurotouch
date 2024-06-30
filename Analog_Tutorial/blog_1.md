@@ -1,6 +1,6 @@
 
 # Part1: Software Installation
-## Process for installing
+## What are we installing?
 Various software packages and data packages are necessary to create our own analog circuit designs. 
 In this tutorial, we are going to explain how to install all necessary packages and provide additional 
 knowledge for those unfamiliar with Linux installations and all the software tools needed to design 
