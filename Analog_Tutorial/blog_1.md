@@ -16,6 +16,22 @@ analog cirucit designs. In this tutorial we are going to install 2 graphical pro
 
 ### Installing Xschem
 
+```bash
+git clone https://github.com/StefanSchippers/xschem.git xschem-src
+```
+
+```bash
+./configure
+```
+
+```bash
+make
+```
+
+
+```bash
+sudo make install
+```
 ### Installing Magic
 
 ### Installing Ng Spice
