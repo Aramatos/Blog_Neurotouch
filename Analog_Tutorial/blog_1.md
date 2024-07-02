@@ -6,7 +6,7 @@ In this tutorial, we are going to explain how to install all necessary packages 
 knowledge for those unfamiliar with Linux installations and all the software tools needed to design 
 analog circuits.
 
-We are going to install 5 things in toal:
+We are going to install 5 things in total:
 2 graphical design programs (Xschem & Magic VLSI)
 1 simulator program (nGspice)
 1 data package (Skywater PDK 130) 
@@ -14,8 +14,11 @@ We are going to install 5 things in toal:
 
 ![Image Description](../Figures_Analog_Tutorial/diagram.png)
 
+Open a terminal and move to a location where you would prefer to have all your source files. 
+You can delete them later or keep them for easier updating of your software packages.
 
 ### Installing Xschem
+Xschem is the scheamtic editor tool where most of our planning and design will occur.
 
 ```bash
 git clone https://github.com/StefanSchippers/xschem.git xschem-src
@@ -29,6 +32,21 @@ make
 ```bash
 sudo make install
 ```
+
+after installing there are some important file locations to remember:
+
+System-wide Xschem executable is in:
+
+/usr/local/share/xschem/ (or wherever specified during install)
+
+User configuration goes in a hidden folder in your home directory:
+
+~/.xschem/ 
+
+The main user config file is:
+
+~/.xschem/xschemrc
+
 ### Installing Magic
 ```bash
 git clone https://github.com/StefanSchippers/xschem.git xschem-src
