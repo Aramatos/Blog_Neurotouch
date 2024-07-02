@@ -55,4 +55,7 @@ Add two graph windows and one load waves
 ### Xschem Simulating shortcuts
 -graph the transisent of the elected net:**alt+G**
 -fit x axis: **f** while cursos is inside graph
+-zooming: shfit key and drag
+-iisolate a single run **t**
+
 
