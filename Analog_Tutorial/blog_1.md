@@ -47,6 +47,10 @@ The main user config file is:
 
 ~/.xschem/xschemrc
 
+HOWEVER
+
+we are going to copy this file into a new directory so forget about the one in home as we will have this new one to edit for skywater to work. 
+
 ### Installing Magic
 ```bash
 git clone https://github.com/StefanSchippers/xschem.git xschem-src
