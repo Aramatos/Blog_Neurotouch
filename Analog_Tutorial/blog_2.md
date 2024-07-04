@@ -1,5 +1,5 @@
 
-# Create an Axon hillock 
+# Create an Axon Hillock Neuron 
 Now that we have our software installed we are going to start with the neuron that started it all, the Axon Hillock circuit developed by .. in .
 It is the most basic neuron we can make and it only takes a few components so it's the perfect beginners example. 
 In this part, we are going to create a schematic of the neuron, learn how to select the components of the skywater family and set up a simulation. 
