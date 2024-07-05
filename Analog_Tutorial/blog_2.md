@@ -27,7 +27,8 @@ We want to create the following circuit:
 We need to create two files to simulate this circuit
 - **tt** : which specifies at which corner we are going to be working (that is, at which temperature and pressure state we are working at)
 - **STIMULI** : where we define how our simulation is going to go
-- 
+
+  
 ## writing stimuli file
 Open the stimuli file to write the code 
 
@@ -43,13 +44,28 @@ write test_comparator.raw saves the results to a file.
 # Analysis
 The above circuit works as it is, but let's analyze the circuit elements behind it. As mentioned before we have the neuron architecture, a double inverter amplifier, and a current mirror serving as a current source. Fortunately for us, the inverter is one of the first structures analyzed in the Rehzavi Analog Integrated Circuits book, which if you should take a look if its
 
-1. NMOS Current Equation (saturation region):
 
+## Equations
+Quick reminder of the equations governing the behavior of a transistor:
+
+- **Drain current (I_D) for NMOS**: 
+    - When `V_GS > V_th` and `V_DS > V_GS - V_th`, the drain current is given by:
    $$I_{D_n} = \frac{1}{2} \mu_n C_{ox} \frac{W_n}{L_n} (V_{GS_n} - V_{th_n})^2$$
 
-2. PMOS Current Equation (saturation region):
+- **Drain current (I_D) for PMOS**: 
+    - When `V_SG > V_th` and `V_SD > V_SG - V_th`, the drain current is given by:
+    $$I_{D_p} = \frac{1}{2} \mu_p C_{ox} \frac{W_p}{L_p} (V_{GS_p} - V_{th_p})^2$$
+Where:
+- `μn` and `μp` are the mobility for electrons and holes, respectively.
+- `Cox` is the gate oxide capacitance per unit area.
+- `W` and `L` are the width and length of the transistor channel.
+- `V_GS`, `V_SG`, `V_DS`, and `V_SD` are the gate-source and drain-source voltages for NMOS and PMOS, respectively.
+- `V_th` is the threshold voltage.
+- `λ` is the channel-length modulation parameter.
 
-   $$I_{D_p} = \frac{1}{2} \mu_p C_{ox} \frac{W_p}{L_p} (V_{GS_p} - V_{th_p})^2$$
+When we look at the diagram of our inverters we can clearly see that:
+
+$$I_n =I__p $$
 
 3. Saturation Current Matching:
 
@@ -78,22 +94,5 @@ Power Efficiency: Optimizing
 W reduces short-circuit power during switching and ensures proper logic levels with minimal static power consumption.
 
 
-## Equations
-Quick reminder of the equations governing the behavior of a transistor:
-
-- **Drain current (I_D) for NMOS**: 
-    - When `V_GS > V_th` and `V_DS > V_GS - V_th`, the drain current is given by:
-    - `$I_D = \mu_n Cox \frac{W}{L} (V_{GS} - V_{th})^2 (1 + \lambda V_{DS})$`
-
-- **Drain current (I_D) for PMOS**: 
-    - When `V_SG > V_th` and `V_SD > V_SG - V_th`, the drain current is given by:
-    - `$I_D = \mu_p Cox \frac{W}{L} (V_{SG} - V_{th})^2 (1 + \lambda V_{SD})$`
-Where:
-- `μn` and `μp` are the mobility for electrons and holes, respectively.
-- `Cox` is the gate oxide capacitance per unit area.
-- `W` and `L` are the width and length of the transistor channel.
-- `V_GS`, `V_SG`, `V_DS`, and `V_SD` are the gate-source and drain-source voltages for NMOS and PMOS, respectively.
-- `V_th` is the threshold voltage.
-- `λ` is the channel-length modulation parameter.
 
 
