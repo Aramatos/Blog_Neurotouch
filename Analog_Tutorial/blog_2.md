@@ -41,7 +41,7 @@ run executes the analyses defined above (both .op and .tran).
 write test_comparator.raw saves the results to a file.
 
 
-# Analysis
+## Analysis
 The above circuit works as it is, but let's analyze the circuit elements behind it. As mentioned before we have the neuron architecture, a double inverter amplifier, and a current mirror serving as a current source. Fortunately for us, the inverter is one of the first structures analyzed in the Rehzavi Analog Integrated Circuits book, which if you should take a look if its
 
 
@@ -63,35 +63,28 @@ Where:
 - `V_th` is the threshold voltage.
 - `λ` is the channel-length modulation parameter.
 
-When we look at the diagram of our inverters we can clearly see that:
+
+## Inverter
+
+There are three aspects we can analyze about the inverter, switching speed, drive strencght matching and power efficient,
+
+When we look at the inverter diagram we can see that the currents coming out of the drain of the pmos and nmos transtors have 
+no choice but to equal each other. We can follow through with this equality to then match the width/length ratios as to balance the rise and fall times. 
+
+
 
 $$I_n =I_p$$
 
-3. Saturation Current Matching:
+$$\mu_n C_{ox} \frac{W_n}{L_n} (V_{GS_n} - V_{th_n})^2 = \mu_p C_{ox} \frac{W_p}{L_p} (V_{GS_p} - V_{th_p})^2$$
 
-   $$\mu_n C_{ox} \frac{W_n}{L_n} (V_{GS_n} - V_{th_n})^2 = \mu_p C_{ox} \frac{W_p}{L_p} (V_{GS_p} - V_{th_p})^2$$
+$$\frac{W_n}{L_n} = k \cdot \frac{W_p}{L_p}$$
 
-4. Width Ratio:
+$$L_n = L_p = 130 \, \text{nm}$$
 
-   $$\frac{W_n}{L_n} = k \cdot \frac{W_p}{L_p}$$
-
-5. Length:
-
-   $$L_n = L_p = 130 \, \text{nm}$$
-
-6. Width Example:
-
-   $$W_n = 390 \, \text{nm}$$
-
-   $$W_p = \frac{W_n}{k} = \frac{390 \, \text{nm}}{2.5} = 156 \, \text{nm}$$
-
-Switching Speed: Minimizing 
-𝐿
-L reduces the channel resistance, enhancing switching speed.
-Drive Strength Matching: Matching the drive strengths of NMOS and PMOS ensures balanced rise and fall times, improving signal integrity.
-Power Efficiency: Optimizing 
-𝑊
 W reduces short-circuit power during switching and ensures proper logic levels with minimal static power consumption.
+
+L reduces the channel resistance, enhancing switching speed.
+
 
 
 
