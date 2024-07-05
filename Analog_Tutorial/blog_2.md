@@ -4,7 +4,7 @@ Now that we have our software installed we are going to start with the neuron th
 It is the most basic neuron we can make and it only takes a few components so it's the perfect beginners example. 
 In this part, we are going to create a schematic of the neuron, learn how to select the components of the skywater family and set up a simulation. 
 
-## Essential Xshcem Shortcuts
+### Essential Xshcem Shortcuts
 
 1. add component: **cltr+i**
 2. copy component: select, **c, drag, left click**
@@ -13,7 +13,7 @@ In this part, we are going to create a schematic of the neuron, learn how to sel
 5. add a wire: **w** then **left click**
 6. recenter drawing: **f**
 
-# Schematic
+## Schematic
 
 #if at any point you see your wires and pins turning into various colors of the rainbow, don't worry, you probably clicked Netlist (n).
 Press shift+k to return everything to their normal colors, the only thing that happened was that opened nets were selected. 
@@ -22,14 +22,14 @@ We want to create the following circuit:
 
 
 
-# Simulation
+## Simulation
 
 We need to create two files to simulate this circuit
 - **tt** : which specifies at which corner we are going to be working (that is, at which temperature and pressure state we are working at)
 - **STIMULI** : where we define how our simulation is going to go
 
   
-## writing stimuli file
+### writing stimuli file
 Open the stimuli file to write the code 
 
 
@@ -45,7 +45,7 @@ write test_comparator.raw saves the results to a file.
 The above circuit works as it is, but let's analyze the circuit elements behind it. As mentioned before we have the neuron architecture, a double inverter amplifier, and a current mirror serving as a current source. Fortunately for us, the inverter is one of the first structures analyzed in the Rehzavi Analog Integrated Circuits book, which if you should take a look if its
 
 
-## Equations
+### Equations
 Quick reminder of the equations governing the behavior of a transistor:
 
 - **Drain current (I_D) for NMOS**: 
@@ -65,7 +65,7 @@ Where:
 
 When we look at the diagram of our inverters we can clearly see that:
 
-$$I_n =I__p $$
+$$I_n =I_p$$
 
 3. Saturation Current Matching:
 
