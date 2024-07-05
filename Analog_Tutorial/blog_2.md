@@ -44,37 +44,30 @@ write test_comparator.raw saves the results to a file.
 The above circuit works as it is, but let's analyze the circuit elements behind it. As mentioned before we have the neuron architecture, a double inverter amplifier, and a current mirror serving as a current source. Fortunately for us, the inverter is one of the first structures analyzed in the Rehzavi Analog Integrated Circuits book, which if you should take a look if its
 
 1. NMOS Current Equation (saturation region):
-   \[
-   I_{D_n} = \frac{1}{2} \mu_n C_{ox} \frac{W_n}{L_n} (V_{GS_n} - V_{th_n})^2
-   \]
+
+   $$I_{D_n} = \frac{1}{2} \mu_n C_{ox} \frac{W_n}{L_n} (V_{GS_n} - V_{th_n})^2$$
 
 2. PMOS Current Equation (saturation region):
-   \[
-   I_{D_p} = \frac{1}{2} \mu_p C_{ox} \frac{W_p}{L_p} (V_{GS_p} - V_{th_p})^2
-   \]
+
+   $$I_{D_p} = \frac{1}{2} \mu_p C_{ox} \frac{W_p}{L_p} (V_{GS_p} - V_{th_p})^2$$
 
 3. Saturation Current Matching:
-   \[
-   \mu_n C_{ox} \frac{W_n}{L_n} (V_{GS_n} - V_{th_n})^2 = \mu_p C_{ox} \frac{W_p}{L_p} (V_{GS_p} - V_{th_p})^2
-   \]
+
+   $$\mu_n C_{ox} \frac{W_n}{L_n} (V_{GS_n} - V_{th_n})^2 = \mu_p C_{ox} \frac{W_p}{L_p} (V_{GS_p} - V_{th_p})^2$$
 
 4. Width Ratio:
-   \[
-   \frac{W_n}{L_n} = k \cdot \frac{W_p}{L_p}
-   \]
+
+   $$\frac{W_n}{L_n} = k \cdot \frac{W_p}{L_p}$$
 
 5. Length:
-   \[
-   L_n = L_p = 130 \, \text{nm}
-   \]
+
+   $$L_n = L_p = 130 \, \text{nm}$$
 
 6. Width Example:
-   \[
-   W_n = 390 \, \text{nm}
-   \]
-   \[
-   W_p = \frac{W_n}{k} = \frac{390 \, \text{nm}}{2.5} = 156 \, \text{nm}
-   \]
+
+   $$W_n = 390 \, \text{nm}$$
+
+   $$W_p = \frac{W_n}{k} = \frac{390 \, \text{nm}}{2.5} = 156 \, \text{nm}$$
 
 Switching Speed: Minimizing 
 𝐿
