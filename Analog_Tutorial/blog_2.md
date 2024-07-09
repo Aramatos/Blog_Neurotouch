@@ -1,8 +1,8 @@
 
-# Create an Axon Hillock Neuron 
+# Create an Axon Hillock Neuron (part 1 inverter)
 Now that we have our software installed we are going to start with the neuron that started it all, the Axon Hillock circuit developed by .. in .
 It is the most basic neuron we can make and it only takes a few components so it's the perfect beginners example. 
-In this part, we are going to create a schematic of the neuron, learn how to select the components of the skywater family and set up a simulation. 
+In this part, we are going to create a schematic of the neuron, learn how to select the components of the sky-water family and set up a simulation. 
 
 ### Essential Xshcem Shortcuts
 
@@ -26,14 +26,25 @@ We want to create the following circuit:
 
 We need to create two files to simulate this circuit
 - **tt** : which specifies at which corner we are going to be working (that is, at which temperature and pressure state we are working at)
+
+  
 - **STIMULI** : where we define how our simulation is going to go
 
   
-### writing stimuli file
+### Writing stimuli file
 Open the stimuli file to write the code 
 
+if a line starts with a period (like .op or .save all) it means its 
+If a line has no period it means its a SPICE- command
 
- .save all tells SPICE to save all node voltages and branch currents.
+we wanna write the following control block into it
+
+```
+
+
+```
+ .save all tells SPICE to save all node voltages 
+ and branch currents.
 .op performs an operating point analysis.
 .tran 10n 2000u uic sets up a transient analysis from 0 to 2000 microseconds, with a step size of 10 nanoseconds. 'uic' means "use initial conditions".
 The .control ... .endc block contains commands for ngspice's interactive interpreter.
@@ -46,7 +57,7 @@ The above circuit works as it is, but let's analyze the circuit elements behind 
 
 
 ### Equations
-Quick reminder of the equations governing the behavior of a transistor:
+A quick reminder of the equations governing the behavior of a transistor:
 
 - **Drain current (I_D) for NMOS**: 
     - When `V_GS > V_th` and `V_DS > V_GS - V_th`, the drain current is given by:
@@ -66,12 +77,10 @@ Where:
 
 ## Inverter
 
-There are three aspects we can analyze about the inverter, switching speed, drive strencght matching and power efficient,
+There are three aspects we can analyze about the inverter, switching speed, drive strength matching and power efficiency,
 
-When we look at the inverter diagram we can see that the currents coming out of the drain of the pmos and nmos transtors have 
+When we look at the inverter diagram we can see that the currents coming out of the drain of the Pmos and Nmos transistors have 
 no choice but to equal each other. We can follow through with this equality to then match the width/length ratios as to balance the rise and fall times. 
-
-
 
 $$I_n =I_p$$
 
