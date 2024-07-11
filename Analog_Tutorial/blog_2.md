@@ -51,6 +51,9 @@ The .control ... .endc block contains commands for ngspice's interactive interpr
 run executes the analyses defined above (both .op and .tran).
 write test_comparator.raw saves the results to a file.
 
+### SIMULATION SHORTCUTES
+-f zoom into the horizontal length
+-d 
 
 ## Analysis
 The above circuit works as it is, but let's analyze the circuit elements behind it. As mentioned before we have the neuron architecture, a double inverter amplifier, and a current mirror serving as a current source. Fortunately for us, the inverter is one of the first structures analyzed in the Rehzavi Analog Integrated Circuits book, which if you should take a look if its
