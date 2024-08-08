@@ -1,11 +1,12 @@
 
 # Design an Inverter
-Now that we have our software installed we are going to start with the neuron that started it all, the Axon Hillock circuit developed by .. in .
+Now that we have our software installed we are going to start with an inverter and heavily explore the analysis types possible in xschem. The inverter is also a crucial element in the design of various 
+
+
 It is the most basic neuron we can make and it only takes a few components so it's the perfect beginners example. 
 In this part, we are going to create a schematic of the neuron, learn how to select the components of the sky-water family and set up a simulation. 
 
 ### Essential Xshcem Shortcuts
-
 1. add component: **cltr+i**
 2. copy component: select, **c, drag, left click**
 3. move objects: **left click,m,move_coursor",left click**
