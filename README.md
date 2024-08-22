@@ -1,7 +1,14 @@
-# portfolio
+# Portfolio
 
 setup: `npm i`
 
-how to run: `npm run dev`
+run: `npm run dev`
 
-how to build: `npm run build`
+build: `npm run build`
+
+### TODO
+- add the [markdown-it-footnote](https://github.com/markdown-it/markdown-it-footnote) extention
+
+- add the [render](https://www.11ty.dev/docs/plugins/render/) plugin
+
+- add [highlightjs](https://highlightjs.org/) for code syntax highlighting

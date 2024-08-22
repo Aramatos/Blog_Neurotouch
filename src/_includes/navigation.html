@@ -1,0 +1,15 @@
+{% if page.url != "/" %}
+  <a href="/">
+    <h1>{{ global.home-title }}</h1>
+  </a>
+{% else %}
+  <h1 class="active">{{ global.home-title }}</h1>
+{% endif %}
+
+{% if page.url != "/about/" %}
+  <a href="/about">
+    <h2>about</h2>
+  </a>
+{% else %}
+  <h2 class="active">about</h2>
+{% endif %}
