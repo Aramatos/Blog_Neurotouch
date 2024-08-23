@@ -87,6 +87,22 @@ Start numbering with offset:
 57. foo
 1. bar
 
+Some title:
+- Pariatur duis laborum occaecat adipisicing labore ad ex dolor adipisicing velit esse do. In tempor veniam adipisicing irure proident veniam officia incididunt. Laborum aliqua cupidatat id consequat elit irure elit. In aliquip mollit sunt in reprehenderit ad esse. Incididunt ad consectetur aliquip consequat eiusmod labore proident incididunt. Duis nisi laborum amet amet enim cillum aute aliquip nulla in. Minim irure commodo in dolor consectetur est consequat esse. Aute exercitation cupidatat reprehenderit ea dolor et fugiat laboris proident anim culpa.
+
+  $$\cfrac {a+b} {c+d}$$
+
+  Culpa quis fugiat anim exercitation dolore incididunt laboris magna Lorem eiusmod. Consequat occaecat sunt proident anim dolor voluptate exercitation esse ullamco anim. Commodo ullamco duis aliquip sint dolore do laborum enim sunt laborum nostrud.
+
+- **New point**
+
+  Exercitation occaecat dolore id est eiusmod minim id ex. Sit duis consequat dolor culpa exercitation culpa ut ea ad laboris adipisicing. Enim amet irure est labore cupidatat qui fugiat ullamco et pariatur est ex ut. Enim do esse qui mollit incididunt enim esse. Irure ut proident pariatur sint Lorem aute ea fugiat elit ex consectetur. Lorem irure quis cupidatat laborum pariatur labore ex eiusmod cupidatat. Nostrud exercitation sunt ut cupidatat.
+- **New point**: something short
+  - Nested list
+  - Nested list
+  - Nested list
+- **New point**: something short
+- **New point**: something short
 
 ## Code
 
@@ -156,8 +172,14 @@ With a reference later in the document defining the URL location:
 The killer feature of `markdown-it` is very effective support of
 [syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
 
+### [markdown-it-texmath](https://www.npmjs.com/package/markdown-it-texmath)
 
-Esse ea officia laborum nulla. Commodo aliqua enim nisi voluptate in. Nulla excepteur aliquip ad reprehenderit mollit eiusmod mollit exercitation pariatur dolor ex eiusmod. Est ad sint deserunt sunt aliquip eiusmod ipsum do dolor occaecat duis qui laboris cillum.
+inline example: Euler\'s identity: $e^{i \pi} + 1 = 0$
+
+block example:
+
+$$\displaystyle\sum_{i=1}^n i = \cfrac {n(n+1)} {2}$$
+
 
 ## Image caveats
 
@@ -183,15 +205,13 @@ you should do it with a style block
   }
 </style>
 ```
+
 <style>
   /* use the [alt] selector to specify your image */
   img[alt=screenshot-1],
   img[alt=screenshot-2] {
-    /* display: block;
-    margin: 0 auto; */
-    text-align: center;
-    vertical-align: middle;
-    float: right;
+    display: block;
+    margin: 0 auto;
   }
 </style>
 
@@ -199,8 +219,4 @@ you should do it with a style block
 ![screenshot-1](/assets/Screenshot%20from%202024-06-29%2013-15-52.png)
 ![screenshot-2](/assets/Screenshot%20from%202024-06-29%2013-16-45.png)
 
-<p style="text-align: center">
-  ![screenshot-1](/assets/Screenshot%20from%202024-06-29%2013-15-52.png)
-  ![screenshot-2](/assets/Screenshot%20from%202024-06-29%2013-16-45.png)
-</p>
 -----

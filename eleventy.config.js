@@ -22,7 +22,12 @@ module.exports = function (eleventyConfig) {
   }));
 
   eleventyConfig.amendLibrary("md", (md) => {
-    md.use(markdownTexmath);
+    md.use(markdownTexmath, {
+      engine: require('katex'),
+      katexOptions: {
+        output: "mathml",
+      }
+    });
   })
 
   // filter to format date to long format
