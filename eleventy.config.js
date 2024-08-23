@@ -1,5 +1,6 @@
 const markdownit = require('markdown-it');
 const hljs = require('highlight.js');
+const markdownTexmath = require('markdown-it-texmath');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
@@ -19,6 +20,10 @@ module.exports = function (eleventyConfig) {
       return '<pre class="hljs"><code>' + str + '</code></pre>';
     }
   }));
+
+  eleventyConfig.amendLibrary("md", (md) => {
+    md.use(markdownTexmath);
+  })
 
   // filter to format date to long format
   eleventyConfig.addFilter("format_date", function (date) {

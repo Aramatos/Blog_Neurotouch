@@ -158,3 +158,49 @@ The killer feature of `markdown-it` is very effective support of
 
 
 Esse ea officia laborum nulla. Commodo aliqua enim nisi voluptate in. Nulla excepteur aliquip ad reprehenderit mollit eiusmod mollit exercitation pariatur dolor ex eiusmod. Est ad sint deserunt sunt aliquip eiusmod ipsum do dolor occaecat duis qui laboris cillum.
+
+## Image caveats
+
+Image urls dont work with spaces in them, you need to change the space 
+character for `%20` or avoid them altogether
+
+`/assets/Screenshot from 2024-06-29 13-15-52.png`
+
+to
+
+`/assets/Screenshot%20from%202024-06-29%2013-15-52.png`
+
+If you want to make changes to an image eg. change size, center it, add a border
+you should do it with a style block
+
+```html
+<style>
+  /* use the [alt] selector to specify your image */
+  img[alt=screenshot-1],
+  img[alt=screenshot-2] {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+```
+<style>
+  /* use the [alt] selector to specify your image */
+  img[alt=screenshot-1],
+  img[alt=screenshot-2] {
+    /* display: block;
+    margin: 0 auto; */
+    text-align: center;
+    vertical-align: middle;
+    float: right;
+  }
+</style>
+
+
+![screenshot-1](/assets/Screenshot%20from%202024-06-29%2013-15-52.png)
+![screenshot-2](/assets/Screenshot%20from%202024-06-29%2013-16-45.png)
+
+<p style="text-align: center">
+  ![screenshot-1](/assets/Screenshot%20from%202024-06-29%2013-15-52.png)
+  ![screenshot-2](/assets/Screenshot%20from%202024-06-29%2013-16-45.png)
+</p>
+-----
