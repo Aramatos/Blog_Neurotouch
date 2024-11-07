@@ -1,6 +1,6 @@
 # Neuromorphic Circuits in Skywater 130nm Tutorial
-# Part1: Software Installation
-## What are we installing?
+## Part1: Software Installation
+### What are we installing?
 Various software packages and data packages are necessary to create our own analog circuit designs. 
 In this tutorial, we are going to explain how to install all necessary packages and provide additional 
 knowledge for those unfamiliar with Linux installations and all the software tools needed to design 
@@ -24,50 +24,46 @@ cd Documents
 mkdir Source_Files
 ```
 
-### Installing Xschem
+Additionally you might need the following dependencies to install the softwares
+```bash
+sudo apt update && sudo apt install -y flex bison libx11-dev tcl-dev tk-dev libxpm-dev m4 libcario2-dev python mesa-common-dev libgl-dev libglu1-mesa-dev zlib1g-dev
+```
+
+## Installing Xschem
+
 Xschem is the schematic editor tool. To plan, draw, design and simulate your circuits.
 
+---
 Download the source files
 ```bash
 git clone https://github.com/StefanSchippers/xschem.git xschem-src
 ```
 
-Additionally you might need the following dependencies
-```bash
-sudo apt update && sudo apt install -y flex bison libx11-dev
-```
-
-Move into the folder configure
+Move into the folder, configure and install. Do each separatley to catch missing dependencies. 
 ```bash
 cd xschem-src
 ./configure
 ```
-Make
 ```bash
 make
 ```
-Install
 ```bash
 sudo make install
 ```
 
-after installing there are some important file locations to remember:
+**Important file locations to remember:**
 
 System-wide Xschem executable is in:
-
 /usr/local/share/xschem/ (or wherever specified during install)
 
 User configuration goes in a hidden folder in your home directory:
-
 ~/.xschem/ 
 
 The main user config file is:
-
 ~/.xschem/xschemrc
 
 HOWEVER
-
-we are going to copy this file into a new directory so forget about the one in home as we will have this new one to edit for skywater to work. 
+Later we are going to copy this file into a new directory so forget about the one in home as we will have this new one to edit for skywater to work. 
 
 ### Installing Magic
 ```bash
