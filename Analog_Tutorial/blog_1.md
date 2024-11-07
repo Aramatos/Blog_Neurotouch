@@ -18,20 +18,28 @@ Open a terminal and move to a location where you would prefer to have all your s
 You can delete them later or keep them for easier updating of your software packages.
 For Beginners I recommend creating a folder in your documents to shove them all, as we will download many 
 (Somone email me if there is a better alternative)
+run all your git clone commands wihtin this directory
 
 ```bash
 cd Documents
 mkdir Source_Files
+cd Soure_Files
 ```
 
-Additionally you might need the following dependencies to install the softwares
-```bash
-sudo apt update && sudo apt install -y flex bison libx11-dev tcl-dev tk-dev libxpm-dev m4 libcario2-dev python mesa-common-dev libgl-dev libglu1-mesa-dev zlib1g-dev
-```
+
 
 ## Installing Xschem
 
 Xschem is the schematic editor tool. To plan, draw, design and simulate your circuits.
+
+ dependencies to install the softwares
+```bash
+sudo apt update && sudo apt install -y flex bison libx11-dev tcl-dev tk-dev libxpm-dev m4 
+```
+
+```bash
+sudo apt update && sudo apt install -y libcario2-dev python mesa-common-dev libgl-dev libglu1-mesa-dev zlib1g-dev
+```
 
 ---
 Download the source files
@@ -86,11 +94,13 @@ sudo make install
 
 ### Installing Ng Spice
 ```bash
-sudo apt install autoconf automake libtool
+sudo apt install autoconf automake libtool libxaw7-dev libreadline-dev
+
 git clone https://github.com/StefanSchippers/xschem.git xschem-src
 ```
 ```bash
-./configure
+../configure --with-x --enable-xspice --disable-debug --enable-cider --with-readline=yes --enable-openmp --enable-osdi
+
 ```
 ```bash
 make
