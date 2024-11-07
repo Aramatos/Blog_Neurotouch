@@ -66,10 +66,15 @@ HOWEVER
 Later we are going to copy this file into a new directory so forget about the one in home as we will have this new one to edit for skywater to work. 
 
 ### Installing Magic
+
+Magic is the layout IDE tool, it should be straightforward to install.
+
+---
 ```bash
 git clone git clone git://opencircuitdesign.com/magic
 ```
-```bash
+```bas
+cd magic
 ./configure
 ```
 ```bash
