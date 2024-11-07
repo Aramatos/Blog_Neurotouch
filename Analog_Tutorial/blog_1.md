@@ -86,6 +86,7 @@ sudo make install
 
 ### Installing Ng Spice
 ```bash
+sudo apt install autoconf automake libtool
 git clone https://github.com/StefanSchippers/xschem.git xschem-src
 ```
 ```bash
