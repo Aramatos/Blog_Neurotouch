@@ -67,7 +67,7 @@ Later we are going to copy this file into a new directory so forget about the on
 
 ### Installing Magic
 ```bash
-git clone https://github.com/StefanSchippers/xschem.git xschem-src
+git clone git clone git://opencircuitdesign.com/magic
 ```
 ```bash
 ./configure
