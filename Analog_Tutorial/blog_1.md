@@ -62,12 +62,15 @@ sudo make install
 **Important file locations to remember:**
 
 System-wide Xschem executable is in:
+
 /usr/local/share/xschem/ (or wherever specified during install)
 
 User configuration goes in a hidden folder in your home directory:
+
 ~/.xschem/ 
 
 The main user config file is:
+
 ~/.xschem/xschemrc
 
 HOWEVER
