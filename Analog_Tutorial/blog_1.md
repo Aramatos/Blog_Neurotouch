@@ -16,19 +16,37 @@ We are going to install 5 things in total:
 
 Open a terminal and move to a location where you would prefer to have all your source files. 
 You can delete them later or keep them for easier updating of your software packages.
+For Beginners I recommend creating a folder in your documents to shove them all, as we will download many 
+(Somone email me if there is a better alternative)
+
+```bash
+cd Documents
+mkdir Source_Files
+```
 
 ### Installing Xschem
-Xschem is the scheamtic editor tool where most of our planning and design will occur.
+Xschem is the schematic editor tool. To plan, draw, design and simulate your circuits.
 
+Download the source files
 ```bash
 git clone https://github.com/StefanSchippers/xschem.git xschem-src
 ```
+
+Additionally you might need the following dependencies
 ```bash
+sudo apt update && sudo apt install -y flex bison libx11-dev
+```
+
+Move into the folder configure
+```bash
+cd xschem-src
 ./configure
 ```
+Make
 ```bash
 make
 ```
+Install
 ```bash
 sudo make install
 ```
