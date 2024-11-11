@@ -73,8 +73,13 @@ The main user config file is:
 HOWEVER
 Later we are going to copy this file into a new directory so forget about the one in home as we will have this new one to edit for skywater to work. 
 
+Go into the xschem hidden directory in your home directory and add the .spiceinit file required for simulations
 ```bash
-cd ./~
+cd ~/.xschem
+mkdir simulations
+cd simulations
+echo "set ngbehavior=hsa" > .spiceinit
+echo "set ng_nomodcheck" >> .spiceinit
 ```
 
 ### Installing Magic
