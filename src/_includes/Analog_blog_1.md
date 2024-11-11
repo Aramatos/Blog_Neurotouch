@@ -34,12 +34,9 @@ Xschem is the schematic editor tool. To plan, draw, design and simulate your cir
 
  dependencies to install the softwares
 ```bash
-sudo apt update && sudo apt install -y flex bison libx11-dev tcl-dev tk-dev libxpm-dev m4 
+sudo apt update && sudo apt install -y flex bison libx11-dev tcl-dev tk-dev libxpm-dev m4 xterm
 ```
 
-```bash
-sudo apt update && sudo apt install -y libcario2-dev python mesa-common-dev libgl-dev libglu1-mesa-dev zlib1g-dev
-```
 
 ---
 Download the source files
@@ -76,11 +73,22 @@ The main user config file is:
 HOWEVER
 Later we are going to copy this file into a new directory so forget about the one in home as we will have this new one to edit for skywater to work. 
 
+```bash
+cd ./~
+```
+
 ### Installing Magic
 
 Magic is the layout IDE tool, it should be straightforward to install.
 
 ---
+
+install dependencies
+
+```bash
+sudo apt update && sudo apt install -y libcario2-dev python mesa-common-dev libgl-dev libglu1-mesa-dev zlib1g-dev
+```
+
 ```bash
 git clone git clone git://opencircuitdesign.com/magic
 ```
@@ -111,6 +119,8 @@ make
 ```bash
 sudo make install
 ```
+
+
 
 ### Installing Nnet
 ```bash
