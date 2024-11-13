@@ -125,6 +125,30 @@ make
 sudo make install
 ```
 
+### Installing the PDK
+
+```bash
+sudo apt update
+sudo apt install python3-setuptools
+sudo apt install python3-distutils
+```
+
+```bash
+git clone git://opencircuitdesign.com/open_pdks
+cd open_pdks
+```
+Now that you have copied the directory run each line separately
+```bash
+./configure --enable-sky130-pdk
+```
+```
+make
+```
+```
+sudo make install
+```
+
+
 
 
 ### Installing Nnet
@@ -156,19 +180,4 @@ make
 sudo make install
 ```
 
-### Installing the PDK
-```bash
-git clone git://opencircuitdesign.com/open_pdks
-cd open_pdks
-```
-Now that you have copied the directory run each line separately
-```bash
-./configure --enable-sky130-pdk
-```
-```
-make
-```
-```
-sudo make install
-```
 
