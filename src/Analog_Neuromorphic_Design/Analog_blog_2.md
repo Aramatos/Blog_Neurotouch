@@ -1,4 +1,8 @@
-
+---
+title: Analog Blog 2
+tags: Analog-Neuromorphic-Design
+layout: layouts/parent-post
+---
 # Design an Inverter
 Now that we have our software installed we are going to start with an inverter and heavily explore the analysis types possible in xschem. The inverter is also a crucial element in the design of various 
 

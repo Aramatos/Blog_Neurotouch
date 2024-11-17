@@ -1,3 +1,8 @@
+---
+title: Analog Blog 1
+tags: Analog-Neuromorphic-Design
+layout: layouts/parent-post
+---
 # Neuromorphic Circuits in Skywater 130nm Tutorial
 ## Part1: Software Installation
 ### What are we installing?
@@ -9,10 +14,10 @@ analog circuits.
 We are going to install 5 things in total:
 2 graphical design programs (Xschem & Magic VLSI)
 1 simulator program (nGspice)
-1 data package (Skywater PDK 130) 
+1 data package (Skywater PDK 130)
 1 program that cross-checks the design at the schematic and layout level (Ngnet).
 
-![Image Description](../Figures_Analog_Tutorial/diagram.png)
+![Image Description](../diagram.png)
 
 Open a terminal and move to a location where you would prefer to have all your source files. 
 You can delete them later or keep them for easier updating of your software packages.
@@ -34,12 +39,9 @@ Xschem is the schematic editor tool. To plan, draw, design and simulate your cir
 
  dependencies to install the softwares
 ```bash
-sudo apt update && sudo apt install -y flex bison libx11-dev tcl-dev tk-dev libxpm-dev m4 
+sudo apt update && sudo apt install -y flex bison libx11-dev tcl-dev tk-dev libxpm-dev m4 xterm
 ```
 
-```bash
-sudo apt update && sudo apt install -y libcario2-dev python mesa-common-dev libgl-dev libglu1-mesa-dev zlib1g-dev
-```
 
 ---
 Download the source files
@@ -76,11 +78,27 @@ The main user config file is:
 HOWEVER
 Later we are going to copy this file into a new directory so forget about the one in home as we will have this new one to edit for skywater to work. 
 
+Go into the xschem hidden directory in your home directory and add the .spiceinit file required for simulations
+```bash
+cd ~/.xschem
+mkdir simulations
+cd simulations
+echo "set ngbehavior=hsa" > .spiceinit
+echo "set ng_nomodcheck" >> .spiceinit
+```
+
 ### Installing Magic
 
 Magic is the layout IDE tool, it should be straightforward to install.
 
 ---
+
+install dependencies
+
+```bash
+sudo apt update && sudo apt install -y libcario2-dev python mesa-common-dev libgl-dev libglu1-mesa-dev zlib1g-dev
+```
+
 ```bash
 git clone git clone git://opencircuitdesign.com/magic
 ```
@@ -112,6 +130,32 @@ make
 sudo make install
 ```
 
+### Installing the PDK
+
+```bash
+sudo apt update
+sudo apt install python3-setuptools
+sudo apt install python3-distutils
+```
+
+```bash
+git clone git://opencircuitdesign.com/open_pdks
+cd open_pdks
+```
+Now that you have copied the directory run each line separately
+```bash
+./configure --enable-sky130-pdk
+```
+```
+make
+```
+```
+sudo make install
+```
+
+
+
+
 ### Installing Nnet
 ```bash
 git clone https://github.com/StefanSchippers/xschem.git xschem-src
@@ -141,19 +185,4 @@ make
 sudo make install
 ```
 
-### Installing the PDK
-```bash
-git clone git://opencircuitdesign.com/open_pdks
-cd open_pdks
-```
-Now that you have copied the directory run each line separately
-```bash
-./configure --enable-sky130-pdk
-```
-```
-make
-```
-```
-sudo make install
-```
 

@@ -1,3 +1,5 @@
+/* This file contains the styles for the markdown output */
+
 article {
   padding-bottom: 10rem;
   display: flex;
@@ -23,7 +25,6 @@ article h4,
 article h5,
 article h6 {
   margin-top: 1rem;
-  /* color: var(--primary); */
 }
 
 article>hr {
@@ -118,5 +119,4 @@ table>tbody>tr:nth-child(odd) {
 
 article img {
   max-width: 100%;
-  /* height: auto; */
 }

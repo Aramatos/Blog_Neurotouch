@@ -1,4 +1,8 @@
-
+---
+title: Analog Blog 3
+tags: Analog-Neuromorphic-Design
+layout: layouts/parent-post
+---
 ## Simulation
 
 # Putting code on your design

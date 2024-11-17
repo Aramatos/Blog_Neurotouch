@@ -1,3 +1,9 @@
+---
+title: Analog Blog 4
+tags: Analog-Neuromorphic-Design
+layout: layouts/parent-post
+hide-title: true
+---
 # Part 2: Create an AXON 
 For the first design, we are going to create a 5-transistor operational amplifier. This amplifier will be at the heart of our first analog neuron in part 3. I will also make a part 3.5, for those who want to fo more thoroughly through the equations to design this subsystem. 
 

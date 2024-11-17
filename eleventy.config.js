@@ -1,13 +1,16 @@
-const markdownit = require('markdown-it');
-const hljs = require('highlight.js');
-const markdownTexmath = require('markdown-it-texmath');
+import markdownit from 'markdown-it';
+import hljs from 'highlight.js';
+import markdownTexmath from 'markdown-it-texmath';
+import katex from 'katex';
 
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+export default function (eleventyConfig) {
+  // copy image files to output directory conserving file path
+  eleventyConfig.addPassthroughCopy("src/**/*.jpg");
+  eleventyConfig.addPassthroughCopy("src/**/*.png");
 
+  // Add syntax highlighting for code blocks
   eleventyConfig.setLibrary("md", markdownit({
     html: true,
-    // Add syntax highlighting for code blocks
     highlight: function (str, lang) {
       if (lang && hljs.getLanguage(lang)) {
         try {
@@ -21,9 +24,10 @@ module.exports = function (eleventyConfig) {
     }
   }));
 
+  // add math plugin (markdownTexmath with katex) to markdown engine
   eleventyConfig.amendLibrary("md", (md) => {
     md.use(markdownTexmath, {
-      engine: require('katex'),
+      engine: katex,
       katexOptions: {
         output: "mathml",
       }
@@ -41,7 +45,14 @@ module.exports = function (eleventyConfig) {
         timeZone: "UTC",
       });
     return formatter.format(date);
-  })
+  });
+
+  // exclude drafts when making full Eleventy Builds
+  eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+    if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+      return false;
+    }
+  });
 
   return {
     dir: {

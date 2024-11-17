@@ -2,6 +2,18 @@
 layout: base.html
 ---
 
+<aside>
+  {% for post in collections[tags[0]] %}
+    <a
+      {% if page.url == post.url %}
+      aria-current="page"
+      {% endif %}
+      href="{{ post.url }}">
+      {{ post.data.title }}
+    </a>
+  {% endfor %}
+</aside>
+
 <article>
   {% if hide-title == false %}
     <header>
