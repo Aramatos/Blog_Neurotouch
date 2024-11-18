@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
+  Theme: GitHub Dark Dimmed
+  Description: Dark dimmed theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Colors taken from GitHub's CSS
+*/.hljs{color:#adbac7;background:#22272e}.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_{color:#f47067}.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#dcbdfb}.hljs-attr,.hljs-attribute,.hljs-literal,.hljs-meta,.hljs-number,.hljs-operator,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-variable{color:#6cb6ff}.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#96d0ff}.hljs-built_in,.hljs-symbol{color:#f69d50}.hljs-code,.hljs-comment,.hljs-formula{color:#768390}.hljs-name,.hljs-quote,.hljs-selector-pseudo,.hljs-selector-tag{color:#8ddb8c}.hljs-subst{color:#adbac7}.hljs-section{color:#316dca;font-weight:700}.hljs-bullet{color:#eac55f}.hljs-emphasis{color:#adbac7;font-style:italic}.hljs-strong{color:#adbac7;font-weight:700}.hljs-addition{color:#b4f1b4;background-color:#1b4721}.hljs-deletion{color:#ffd8d3;background-color:#78191b}
+      :root {
+  /* --primary: hsl(36, 65%, 39%);
+  --primary-dark: hsl(36, 65%, 30%);
+  --primary-darker: hsl(36, 100%, 13%);
+  --accent: #00A0A0;
+  --neutral: #F8F8EC;
+  --neutral-300: #D8D8C5; */
+
+
+
+  /* --primary: #4aa2ee;
+  --primary-light: #94d6fe;
+  --primary-dark: #4b73d2;
+  --primary-darker: #152344;
+  --neutral: #edf8ff;
+  --neutral: #f9fdff;
+  --accent: #ffb7c5; */
+
+
+  --primary-light: #7FA1C3;
+  --primary: #6482AD;
+  --primary-dark: #496285;
+  --primary-darker: #364c69;
+
+  --neutral-light: #fff6f6;
+  --neutral: #F5EDED;
+  --neutral-dark: #E2DAD6;
+
+  --text-color: #484e60;
+  --text-color-light: #717685;
+  --border-color: #C1BDBC;
+}
+      /* This file contains the styles for the markdown output */
+
+article {
+  padding-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  line-height: 1.5;
+}
+
+article>header {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+p.subtitle {
+  color: var(--text-color-light);
+  font-weight: bold;
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  margin-top: 1rem;
+}
+
+article>hr {
+  width: 100%;
+}
+
+hr {
+  border-color: var(--border-color);
+  border-style: solid;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+a {
+  color: var(--primary-dark);
+}
+
+a:visited {
+  color: var(--primary-darker);
+}
+
+li>*:not(ul):nth-child(n+2) {
+  margin-top: 1rem;
+}
+
+code {
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: var(--text-color);
+  background-color: var(--neutral-dark);
+}
+
+pre {
+  display: block;
+  padding: 9.5px;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--text-color);
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: var(--neutral-light);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+pre>code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+blockquote {
+  padding: 0.75rem 1rem;
+  font-size: 1.125rem;
+  color: var(--text-color-light);
+  background-color: var(--neutral);
+  border-left: 4px solid var(--border-color);
+  border-radius: 4px;
+  display: flex;
+  gap: 0.75rem;
+  flex-direction: column;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+table>tbody>tr:nth-child(odd) {
+  background-color: var(--neutral-light);
+}
+
+article img {
+  max-width: 100%;
+}
+      /* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ol,
+ul,
+pre {
+  margin: 0;
+}
+
+
+/*  */
+
+html {
+  scrollbar-color: var(--border-color) var(--neutral-dark);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--neutral);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+
+nav {
+  width: 100%;
+  padding: 0.5rem 1rem;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+
+  background-color: var(--primary);
+  color: var(--neutral-dark);
+}
+
+nav h1,
+nav h2 {
+  color: var(--neutral);
+}
+
+nav>a,
+nav>h1,
+nav>h2 {
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+}
+
+nav a:hover,
+nav h1.active,
+nav h2.active {
+  border-bottom-color: var(--neutral);
+}
+
+main {
+  width: 100%;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+aside {
+  max-width: 150px;
+  flex-shrink: 0;
+  padding-top: 4em;
+  font-size: 14px;
+
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+aside a {
+  padding: 0.25rem;
+}
+
+aside a[aria-current="page"] {
+  background-color: var(--neutral-dark);
+  border-radius: 4px;
+}
+
+article {
+  max-width: 800px;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/*  */
+
+img.headshot {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* BUTTON STYLES */
+button,
+a.btn {
+  background-color: var(--primary);
+  color: var(--neutral);
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover,
+a.btn:hover {
+  background-color: var(--primary-dark);
+}
+
+a.btn:active {
+  background-color: var(--primary-darker);
+}
+
+a.btn:visited {
+  color: var(--neutral);
+}
+
+/* CARD STYLES */
+.cards-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--neutral-light);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card>img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  border: none;
+}
+
+.card>.img {
+  height: 200px;
+  background-color: var(--neutral-dark);
+  text-align: center;
+}
+
+.card>.img>svg {
+  height: 100%;
+  margin: 0 auto;
+}
+
+.card>.card-content {
+  padding: 1rem;
+  flex: 1 0 0;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card>.card-content h2 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.card a.btn {
+  align-self: flex-start;
+}
+
+@media only screen and (max-width: 800px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  aside {
+    padding-top: 0;
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+}
+    </style>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <title>Analog Blog 1</title>
+  </head>
+
+  <body>
+    <nav>
+      
+  <a href="/Blog-Neurotouch/">
+    <h1>Home</h1>
+  </a>
+
+
+
+  <a href="/Blog-Neurotouch/about">
+    <h2>about</h2>
+  </a>
+
+    </nav>
+    <main>
+
+      
+<aside>
+  
+    <a
+      
+      aria-current="page"
+      
+      href="/Blog-Neurotouch/Analog_Neuromorphic_Design/Analog_blog_1/">
+      Analog Blog 1
+    </a>
+  
+    <a
+      
+      href="/Blog-Neurotouch/Analog_Neuromorphic_Design/Analog_blog_2/">
+      Analog Blog 2
+    </a>
+  
+    <a
+      
+      href="/Blog-Neurotouch/Analog_Neuromorphic_Design/Analog_blog_3/">
+      Analog Blog 3
+    </a>
+  
+    <a
+      
+      href="/Blog-Neurotouch/Analog_Neuromorphic_Design/Analog_blog_4/">
+      Analog Blog 4
+    </a>
+  
+    <a
+      
+      href="/Blog-Neurotouch/Analog_Neuromorphic_Design/">
+      Analog Neuromorphic Design Landing
+    </a>
+  
+</aside>
+
+<article>
+  
+  <h1>Neuromorphic Circuits in Skywater 130nm Tutorial</h1>
+<h2>Part1: Software Installation</h2>
+<h3>What are we installing?</h3>
+<p>Various software packages and data packages are necessary to create our own analog circuit designs.
+In this tutorial, we are going to explain how to install all necessary packages and provide additional
+knowledge for those unfamiliar with Linux installations and all the software tools needed to design
+analog circuits.</p>
+<p>We are going to install 5 things in total:
+2 graphical design programs (Xschem &amp; Magic VLSI)
+1 simulator program (nGspice)
+1 data package (Skywater PDK 130)
+1 program that cross-checks the design at the schematic and layout level (Ngnet).</p>
+<p><img src="../diagram.png" alt="Image Description"></p>
+<p>Open a terminal and move to a location where you would prefer to have all your source files.
+You can delete them later or keep them for easier updating of your software packages.
+For Beginners I recommend creating a folder in your documents to shove them all, as we will download many
+(Somone email me if there is a better alternative)
+run all your git clone commands wihtin this directory</p>
+<pre class="hljs"><code><span class="hljs-built_in">cd</span> Documents
+<span class="hljs-built_in">mkdir</span> Source_Files
+<span class="hljs-built_in">cd</span> Soure_Files
+</code></pre>
+<h2>Installing Xschem</h2>
+<p>Xschem is the schematic editor tool. To plan, draw, design and simulate your circuits.</p>
+<p>dependencies to install the softwares</p>
+<pre class="hljs"><code><span class="hljs-built_in">sudo</span> apt update &amp;&amp; <span class="hljs-built_in">sudo</span> apt install -y flex bison libx11-dev tcl-dev tk-dev libxpm-dev m4 xterm
+</code></pre>
+<hr>
+<p>Download the source files</p>
+<pre class="hljs"><code>git <span class="hljs-built_in">clone</span> https://github.com/StefanSchippers/xschem.git xschem-src
+</code></pre>
+<p>Move into the folder, configure and install. Do each separatley to catch missing dependencies.</p>
+<pre class="hljs"><code><span class="hljs-built_in">cd</span> xschem-src
+./configure
+</code></pre>
+<pre class="hljs"><code>make
+</code></pre>
+<pre class="hljs"><code><span class="hljs-built_in">sudo</span> make install
+</code></pre>
+<p><strong>Important file locations to remember:</strong></p>
+<p>System-wide Xschem executable is in:</p>
+<p>/usr/local/share/xschem/ (or wherever specified during install)</p>
+<p>User configuration goes in a hidden folder in your home directory:</p>
+<p>~/.xschem/</p>
+<p>The main user config file is:</p>
+<p>~/.xschem/xschemrc</p>
+<p>HOWEVER
+Later we are going to copy this file into a new directory so forget about the one in home as we will have this new one to edit for skywater to work.</p>
+<p>Go into the xschem hidden directory in your home directory and add the .spiceinit file required for simulations</p>
+<pre class="hljs"><code><span class="hljs-built_in">cd</span> ~/.xschem
+<span class="hljs-built_in">mkdir</span> simulations
+<span class="hljs-built_in">cd</span> simulations
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;set ngbehavior=hsa&quot;</span> &gt; .spiceinit
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;set ng_nomodcheck&quot;</span> &gt;&gt; .spiceinit
+</code></pre>
+<h3>Installing Magic</h3>
+<p>Magic is the layout IDE tool, it should be straightforward to install.</p>
+<hr>
+<p>install dependencies</p>
+<pre class="hljs"><code><span class="hljs-built_in">sudo</span> apt update &amp;&amp; <span class="hljs-built_in">sudo</span> apt install -y libcario2-dev python mesa-common-dev libgl-dev libglu1-mesa-dev zlib1g-dev
+</code></pre>
+<pre class="hljs"><code>git <span class="hljs-built_in">clone</span> git <span class="hljs-built_in">clone</span> git://opencircuitdesign.com/magic
+</code></pre>
+<pre class="hljs"><code>cd magic
+./configure
+</code></pre>
+<pre class="hljs"><code>make
+</code></pre>
+<pre class="hljs"><code><span class="hljs-built_in">sudo</span> make install
+</code></pre>
+<h3>Installing Ng Spice</h3>
+<pre class="hljs"><code><span class="hljs-built_in">sudo</span> apt install autoconf automake libtool libxaw7-dev libreadline-dev
+
+git <span class="hljs-built_in">clone</span> https://github.com/StefanSchippers/xschem.git xschem-src
+</code></pre>
+<pre class="hljs"><code>../configure --with-x --enable-xspice --disable-debug --enable-cider --with-readline=<span class="hljs-built_in">yes</span> --enable-openmp --enable-osdi
+
+</code></pre>
+<pre class="hljs"><code>make
+</code></pre>
+<pre class="hljs"><code><span class="hljs-built_in">sudo</span> make install
+</code></pre>
+<h3>Installing the PDK</h3>
+<pre class="hljs"><code><span class="hljs-built_in">sudo</span> apt update
+<span class="hljs-built_in">sudo</span> apt install python3-setuptools
+<span class="hljs-built_in">sudo</span> apt install python3-distutils
+</code></pre>
+<pre class="hljs"><code>git <span class="hljs-built_in">clone</span> git://opencircuitdesign.com/open_pdks
+<span class="hljs-built_in">cd</span> open_pdks
+</code></pre>
+<p>Now that you have copied the directory run each line separately</p>
+<pre class="hljs"><code>./configure --enable-sky130-pdk
+</code></pre>
+<pre class="hljs"><code>make
+</code></pre>
+<pre class="hljs"><code>sudo make install
+</code></pre>
+<h3>Installing Nnet</h3>
+<pre class="hljs"><code>git <span class="hljs-built_in">clone</span> https://github.com/StefanSchippers/xschem.git xschem-src
+</code></pre>
+<pre class="hljs"><code>./configure
+</code></pre>
+<pre class="hljs"><code>make
+</code></pre>
+<pre class="hljs"><code><span class="hljs-built_in">sudo</span> make install
+</code></pre>
+<h3>Installing the GAW</h3>
+<pre class="hljs"><code>git <span class="hljs-built_in">clone</span> https://github.com/StefanSchippers/xschem.git xschem-src
+</code></pre>
+<pre class="hljs"><code>./configure
+</code></pre>
+<pre class="hljs"><code>make
+</code></pre>
+<pre class="hljs"><code><span class="hljs-built_in">sudo</span> make install
+</code></pre>
+
+</article>
+
+    </main>
+  </body>
+
+</html>

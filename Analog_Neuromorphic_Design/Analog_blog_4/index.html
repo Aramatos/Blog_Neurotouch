@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
+  Theme: GitHub Dark Dimmed
+  Description: Dark dimmed theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Colors taken from GitHub's CSS
+*/.hljs{color:#adbac7;background:#22272e}.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_{color:#f47067}.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#dcbdfb}.hljs-attr,.hljs-attribute,.hljs-literal,.hljs-meta,.hljs-number,.hljs-operator,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-variable{color:#6cb6ff}.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#96d0ff}.hljs-built_in,.hljs-symbol{color:#f69d50}.hljs-code,.hljs-comment,.hljs-formula{color:#768390}.hljs-name,.hljs-quote,.hljs-selector-pseudo,.hljs-selector-tag{color:#8ddb8c}.hljs-subst{color:#adbac7}.hljs-section{color:#316dca;font-weight:700}.hljs-bullet{color:#eac55f}.hljs-emphasis{color:#adbac7;font-style:italic}.hljs-strong{color:#adbac7;font-weight:700}.hljs-addition{color:#b4f1b4;background-color:#1b4721}.hljs-deletion{color:#ffd8d3;background-color:#78191b}
+      :root {
+  /* --primary: hsl(36, 65%, 39%);
+  --primary-dark: hsl(36, 65%, 30%);
+  --primary-darker: hsl(36, 100%, 13%);
+  --accent: #00A0A0;
+  --neutral: #F8F8EC;
+  --neutral-300: #D8D8C5; */
+
+
+
+  /* --primary: #4aa2ee;
+  --primary-light: #94d6fe;
+  --primary-dark: #4b73d2;
+  --primary-darker: #152344;
+  --neutral: #edf8ff;
+  --neutral: #f9fdff;
+  --accent: #ffb7c5; */
+
+
+  --primary-light: #7FA1C3;
+  --primary: #6482AD;
+  --primary-dark: #496285;
+  --primary-darker: #364c69;
+
+  --neutral-light: #fff6f6;
+  --neutral: #F5EDED;
+  --neutral-dark: #E2DAD6;
+
+  --text-color: #484e60;
+  --text-color-light: #717685;
+  --border-color: #C1BDBC;
+}
+      /* This file contains the styles for the markdown output */
+
+article {
+  padding-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  line-height: 1.5;
+}
+
+article>header {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+p.subtitle {
+  color: var(--text-color-light);
+  font-weight: bold;
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  margin-top: 1rem;
+}
+
+article>hr {
+  width: 100%;
+}
+
+hr {
+  border-color: var(--border-color);
+  border-style: solid;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+a {
+  color: var(--primary-dark);
+}
+
+a:visited {
+  color: var(--primary-darker);
+}
+
+li>*:not(ul):nth-child(n+2) {
+  margin-top: 1rem;
+}
+
+code {
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: var(--text-color);
+  background-color: var(--neutral-dark);
+}
+
+pre {
+  display: block;
+  padding: 9.5px;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--text-color);
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: var(--neutral-light);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+pre>code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+blockquote {
+  padding: 0.75rem 1rem;
+  font-size: 1.125rem;
+  color: var(--text-color-light);
+  background-color: var(--neutral);
+  border-left: 4px solid var(--border-color);
+  border-radius: 4px;
+  display: flex;
+  gap: 0.75rem;
+  flex-direction: column;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+table>tbody>tr:nth-child(odd) {
+  background-color: var(--neutral-light);
+}
+
+article img {
+  max-width: 100%;
+}
+      /* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ol,
+ul,
+pre {
+  margin: 0;
+}
+
+
+/*  */
+
+html {
+  scrollbar-color: var(--border-color) var(--neutral-dark);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--neutral);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+
+nav {
+  width: 100%;
+  padding: 0.5rem 1rem;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+
+  background-color: var(--primary);
+  color: var(--neutral-dark);
+}
+
+nav h1,
+nav h2 {
+  color: var(--neutral);
+}
+
+nav>a,
+nav>h1,
+nav>h2 {
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+}
+
+nav a:hover,
+nav h1.active,
+nav h2.active {
+  border-bottom-color: var(--neutral);
+}
+
+main {
+  width: 100%;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+aside {
+  max-width: 150px;
+  flex-shrink: 0;
+  padding-top: 4em;
+  font-size: 14px;
+
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+aside a {
+  padding: 0.25rem;
+}
+
+aside a[aria-current="page"] {
+  background-color: var(--neutral-dark);
+  border-radius: 4px;
+}
+
+article {
+  max-width: 800px;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/*  */
+
+img.headshot {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* BUTTON STYLES */
+button,
+a.btn {
+  background-color: var(--primary);
+  color: var(--neutral);
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover,
+a.btn:hover {
+  background-color: var(--primary-dark);
+}
+
+a.btn:active {
+  background-color: var(--primary-darker);
+}
+
+a.btn:visited {
+  color: var(--neutral);
+}
+
+/* CARD STYLES */
+.cards-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--neutral-light);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card>img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  border: none;
+}
+
+.card>.img {
+  height: 200px;
+  background-color: var(--neutral-dark);
+  text-align: center;
+}
+
+.card>.img>svg {
+  height: 100%;
+  margin: 0 auto;
+}
+
+.card>.card-content {
+  padding: 1rem;
+  flex: 1 0 0;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card>.card-content h2 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.card a.btn {
+  align-self: flex-start;
+}
+
+@media only screen and (max-width: 800px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  aside {
+    padding-top: 0;
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+}
+    </style>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <title>Analog Blog 4</title>
+  </head>
+
+  <body>
+    <nav>
+      
+  <a href="/Blog-Neurotouch/">
+    <h1>Home</h1>
+  </a>
+
+
+
+  <a href="/Blog-Neurotouch/about">
+    <h2>about</h2>
+  </a>
+
+    </nav>
+    <main>
+
+      
+<aside>
+  
+    <a
+      
+      href="/Blog-Neurotouch/Analog_Neuromorphic_Design/Analog_blog_1/">
+      Analog Blog 1
+    </a>
+  
+    <a
+      
+      href="/Blog-Neurotouch/Analog_Neuromorphic_Design/Analog_blog_2/">
+      Analog Blog 2
+    </a>
+  
+    <a
+      
+      href="/Blog-Neurotouch/Analog_Neuromorphic_Design/Analog_blog_3/">
+      Analog Blog 3
+    </a>
+  
+    <a
+      
+      aria-current="page"
+      
+      href="/Blog-Neurotouch/Analog_Neuromorphic_Design/Analog_blog_4/">
+      Analog Blog 4
+    </a>
+  
+    <a
+      
+      href="/Blog-Neurotouch/Analog_Neuromorphic_Design/">
+      Analog Neuromorphic Design Landing
+    </a>
+  
+</aside>
+
+<article>
+  
+  <h1>Part 2: Create an AXON</h1>
+<p>For the first design, we are going to create a 5-transistor operational amplifier. This amplifier will be at the heart of our first analog neuron in part 3. I will also make a part 3.5, for those who want to fo more thoroughly through the equations to design this subsystem.</p>
+<p>This design will be based on the one done by Steffan Schnippers (The creator of xschem for this YouTube video). In an attempt to improve the overall learning process, I will be more thorough than the video. It will hopefully be more thorough for the beginners and also be a faster alternative to a video for those who just want a quick introduction to the xschem-skywater process.</p>
+<h2>Essential Xshcem Shortcuts</h2>
+<ol>
+<li>add new components: <strong>cltr+i</strong></li>
+<li>move objects: <strong>left click,m,move_coursor&quot;,left click</strong></li>
+<li>horizontally mirror objects:<strong>shift+f</strong></li>
+<li>add a wire: <strong>w</strong> then <strong>left click</strong></li>
+</ol>
+<h2>Set up the ports</h2>
+<p>We are going to be creating a comparator op-amp block and a symbol corresponding to it. Meaning that after designing this op-amp we will be able to replicate it infinitely as any other component in our library (like a resistor or a capacitor). To do this we also need to define the input, output, power, and bias ports (if we grabbed a premade op-amp it would already have those).</p>
+<p>press ctrl+i to insert a new component.</p>
+<p>General modeling elements that are not etched in the silicon fabric (the ports, parasitic modeling, ammeters, and us</p>
+<h2>Amplifier stage</h2>
+<p>From the devices tab</p>
+<h3>Editing values</h3>
+<p>We need to edit the values of the width and length of the transistor channels to fit the diagram above.
+To do so you can click a transitor and press the 'q' key. You will then see the following window where you can edit the values.
+Left-click the ok button or outside the edit attributes window to save your changes and close the window.</p>
+<h2>First Amplifier stage</h2>
+<p>First</p>
+<h2>Second Amplifier Stage</h2>
+<p>Note that we are adding a parax_cap from the **devices **library to simulate the cable parasitic capacitance at the output node.
+It's not a capacitor designed into the device but one that models effects from the already existing internal wires.</p>
+<h2>Common Mode Inverter</h2>
+<p>We will now add an inverter to bias the common mode voltage in</p>
+<h2>Setting up the testbench</h2>
+<p>We can now create a symbol that will represent our amplifier. This will allow us to place it in our other designs</p>
+<h2>Simulating</h2>
+<p>Now that the test bench is complete we can set up our simulation to characterize the design of our comparator</p>
+<p>Add two graph windows and one load waves</p>
+<h3>Xschem Simulating shortcuts</h3>
+<p>-graph the transisent of the elected net:<strong>alt+G</strong>
+-fit x axis: <strong>f</strong> while cursos is inside graph
+-zooming: shfit key and drag
+-iisolate a single run <strong>t</strong></p>
+
+</article>
+
+    </main>
+  </body>
+
+</html>
