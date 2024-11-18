@@ -8,7 +8,7 @@ layout: base.html
       {% if page.url == post.url %}
       aria-current="page"
       {% endif %}
-      href="{{ post.url }}">
+      href="{{ post.url | url}}">
       {{ post.data.title }}
     </a>
   {% endfor %}

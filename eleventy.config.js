@@ -8,6 +8,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/**/*.jpg");
   eleventyConfig.addPassthroughCopy("src/**/*.png");
 
+  // Watch css files
+  eleventyConfig.addWatchTarget("src/**/*.css");
+
   // Add syntax highlighting for code blocks
   eleventyConfig.setLibrary("md", markdownit({
     html: true,
