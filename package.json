@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
-    "build-ghpages": "npx @11ty/eleventy --pathprefix=Blog-Neurotouch"
+    "build-ghpages": "npx @11ty/eleventy --pathprefix=Blog_Neurotouch"
   },
   "keywords": [],
   "author": "",

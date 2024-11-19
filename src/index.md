@@ -16,7 +16,7 @@ The Neuromorphic Engineering PhD program at Scuola Superiore Sant'Anna is dedica
 
 ### Latest Posts
 
-- **[Analog Neuromophic Design](/Analog_Neuromorphic_Design)** - An introduction to the fundamentals of analog design for neuromorphic spiking neurons.
+- **[Analog Neuromophic Design]({{ "/Analog_Neuromorphic_Design" | url }})** - An introduction to the fundamentals of analog design for neuromorphic spiking neurons.
 
 ### Join Our Community
 
